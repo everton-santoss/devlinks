@@ -37,9 +37,12 @@ body * {
 }
 
 #container {
-    width: 360px;
+
+    width: 100%;
+
+    max-width: 588px;
     margin: auto;
-    padding: 24px 0px;
+    padding: 24px 10px;
 }
 
 #profile {
@@ -130,6 +133,8 @@ ul li a:hover {
 }
 
 #social-links {
+    margin: auto;
+
     display: flex;
     gap: 32px;
     padding: 0 24px 10px;
