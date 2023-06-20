@@ -16,12 +16,12 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(/assets/bg-desktop-light.jpg);
+  --bg-url: url(assets/bg-desktop-light.jpg);
   --border-list: gray;
   --bg-icons: gray;
   --bg-hover-list: rgba(0, 0, 0, 0.5);
   --profile: black;
-  --button-dark-light: url(/assets/sun.svg);
+  --button-dark-light: url(assets/sun.svg);
 }
 
 body {
