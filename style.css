@@ -1,181 +1,178 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --text-color: white;
-    --bg-url: url(/projeto/assets/bg-desktop.jpg);
-    --border-list: rgb(255, 255, 255, 0.5);
-    --bg-icons: rgba(255, 255, 255, 0.05);
-    --bg-hover-list: rgba(255, 255, 255, 0.05);
-    --profile: white;
-    --button-dark-light: url(./assets/moon-stars.svg);
-
-
+  --text-color: white;
+  --bg-url: url(/assets/bg-desktop.jpg);
+  --border-list: rgb(255, 255, 255, 0.5);
+  --bg-icons: rgba(255, 255, 255, 0.05);
+  --bg-hover-list: rgba(255, 255, 255, 0.05);
+  --profile: white;
+  --button-dark-light: url(/assets/moon-stars.svg);
 }
 
 .light {
-    --text-color: black;
-    --bg-url: url(./assets/bg-desktop-light.jpg);
-    --border-list: gray;
-    --bg-icons: gray;
-    --bg-hover-list: rgba(0,0,0,0.5);
-    --profile: black;
-    --button-dark-light: url(./assets/sun.svg)
+  --text-color: black;
+  --bg-url: url(/assets/bg-desktop-light.jpg);
+  --border-list: gray;
+  --bg-icons: gray;
+  --bg-hover-list: rgba(0, 0, 0, 0.5);
+  --profile: black;
+  --button-dark-light: url(/assets/sun.svg);
 }
 
 body {
-    background-image:var(--bg-url);
-    background-repeat: no-repeat;
-    background-size: cover;
-
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body * {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
 }
 
 #container {
+  width: 100%;
 
-    width: 100%;
-
-    max-width: 588px;
-    margin: auto;
-    padding: 24px 10px;
+  max-width: 588px;
+  margin: auto;
+  padding: 24px 10px;
 }
 
 #profile {
-    text-align: center;
-    padding: 24px 0px 32px;
+  text-align: center;
+  padding: 24px 0px 32px;
 }
 
 #profile img {
-    width: 112px;
-    border-radius: 50%;
-    border: 1px solid gray;
-    transition: width 0.2s;
-    transition: border 0.2s;
+  width: 112px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  transition: width 0.2s;
+  transition: border 0.2s;
 }
 
 #profile img:hover {
-    border-radius: 50%;
-    border: 2px solid var(--profile);
-
+  border-radius: 50%;
+  border: 2px solid var(--profile);
 }
 
 #profile p {
-    font-weight: 500;
-    line-height: 24px;
-    margin-top: 8px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 
 #swith {
-    position: relative;
-    width: 64px;
-    margin: 24px auto;
+  position: relative;
+  width: 64px;
+  margin: 24px auto;
 }
 
 #swith button {
-    width: 32px;
-    height: 32px;   
-    top:50%;
-    border: 0;
-    border-radius: 50%;
-    background: white var(--button-dark-light) no-repeat center;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  border: 0;
+  border-radius: 50%;
+  background: white var(--button-dark-light) no-repeat center;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  transform: translateY(-50%);
 
-    animation: slide-back 0.2s;
+  animation: slide-back 0.2s;
 }
 
 #swith button:hover {
-    outline: 5px solid gray;
+  outline: 5px solid gray;
 }
 
 #swith span {
-    display: block;
-    width: 64px;
-    height: 24px;
-    border: 1px solid gray;
-    border-radius: 9999px;
+  display: block;
+  width: 64px;
+  height: 24px;
+  border: 1px solid gray;
+  border-radius: 9999px;
 }
 
 .light #swith button {
-    animation: slide-in 0.2s forwards;
+  animation: slide-in 0.2s forwards;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 ul li a {
-    display: flex;
-    justify-content: center;
-    font-family: 'Inter', sans-serif;
-    background-color: rgb(255, 255, 255, 0.1);
-    border: 1px solid var(--border-list);
-    margin-top: 16px;
-    padding: 24px;
-    border-radius: 10px;
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  background-color: rgb(255, 255, 255, 0.1);
+  border: 1px solid var(--border-list);
+  margin-top: 16px;
+  padding: 24px;
+  border-radius: 10px;
+  text-decoration: none;
 
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 
-    transition: background 0.2s;
+  transition: background 0.2s;
 }
 
 ul li a:hover {
-    background: var(--bg-hover-list);
-    border: 2px solid var(--text-color);
+  background: var(--bg-hover-list);
+  border: 2px solid var(--text-color);
 }
 
 #social-links {
-    margin: auto;
+  margin: auto;
 
-    display: flex;
-    gap: 32px;
-    padding: 0 24px 10px;
-    font-size: 24px;
-    justify-content: center;
+  display: flex;
+  gap: 32px;
+  padding: 0 24px 10px;
+  font-size: 24px;
+  justify-content: center;
 }
 
 #icons {
-    padding: 16px;
-    border-radius: 50%;
-    transition: background 0.3s;
+  padding: 16px;
+  border-radius: 50%;
+  transition: background 0.3s;
 }
 
 #icons:hover {
-    background:var(--bg-icons);
+  background: var(--bg-icons);
 }
 
 footer {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 @keyframes slide-in {
-    from {
-        left: 0;
-    }to {
-        left: 50%;
-    }
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
 
 @keyframes slide-back {
-    from {
-        left: 50%;
-    } to {
-        left: 0;
-    }
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
