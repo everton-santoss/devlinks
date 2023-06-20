@@ -11,7 +11,9 @@
     --bg-icons: rgba(255, 255, 255, 0.05);
     --bg-hover-list: rgba(255, 255, 255, 0.05);
     --profile: white;
-    --button-dark-light: url(./assets/moon-stars.svg)
+    --button-dark-light: url(./assets/moon-stars.svg);
+
+
 }
 
 .light {
@@ -91,19 +93,24 @@ p {
     z-index: 1;
     left: 0;
     transform: translateY(-50%);
+
+    animation: slide-back 0.2s;
+}
+
+#swith button:hover {
+    outline: 5px solid gray;
 }
 
 #swith span {
     display: block;
     width: 64px;
     height: 24px;
-    border: 1px solid red;
+    border: 1px solid gray;
     border-radius: 9999px;
 }
 
 .light #swith button {
-    left: initial;
-    right: 0;
+    animation: slide-in 0.2s forwards;
 }
 
 li {
@@ -155,4 +162,20 @@ ul li a:hover {
 footer {
     text-align: center;
     margin-top: 20px;
+}
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    } to {
+        left: 0;
+    }
 }
